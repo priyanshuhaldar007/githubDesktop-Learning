@@ -14,5 +14,9 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: Lint Code Base
-        uses: github/super-linter@v4
+      - name: Super-Linter
+        # You may pin to the exact commit or the version.
+        # uses: super-linter/super-linter@b944539b2df01cb8d17504d2fd9411d354e8078a
+        uses: super-linter/super-linter@v5.3.0
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
